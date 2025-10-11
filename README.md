@@ -18,5 +18,6 @@ OpenCore configuration to boot MacOS Tahoe on Intel Haswell cpu.
 - Onboard audio not working (maybe due to audio layout but it worked fine on Sequioa).
 - iService not fully tested (but I can login and use my apple account without issue).
 - iGPU not tested since I use external GPU (it should work if you configure the PciRoot section properly).
+- Changed the GUI on boot section to make it looks like on every mac.
 
 **Depending on your config or specs later might change the functionality.*
