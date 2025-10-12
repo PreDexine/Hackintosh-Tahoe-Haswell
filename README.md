@@ -9,14 +9,15 @@ OpenCore configuration to boot MacOS Tahoe on Intel Haswell cpu.
 **RAM :**    16GB DDR3  
 **SSD :**    512GB Sk Hynix NVME  
 
-**Some config and kext might need a litte bit modifications depending on your motherboard specifications.* 
+**Some config and kext might need a litte bit modifications depending on your specifications.* 
 
 # What's working and not working  
 
 - Onboard LAN.
 - Full GPU acceleration support (Liquid Glass works perfectly fine).
-- Onboard audio not working (maybe due to audio layout but it worked fine on Sequioa).
-- iService not fully tested (but I can login and use my apple account without issue).
+- Onboard audio not working (AppleHDA was removed from Tahoe, use external audio like DAC or HDMI/DP audio).
+- WhateverGreen was removed due to causing kernel panic during boot.
+- iService not fully tested (I can login and use my apple account without issue).
 - iGPU not tested since I use external GPU (it should work if you configure the PciRoot section properly).
 - Changed the GUI on boot section to make it looks like on every mac.
 
