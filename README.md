@@ -1,24 +1,34 @@
 # Hackintosh-Tahoe-Haswell
-OpenCore configuration to boot MacOS Tahoe on Intel Haswell cpu.    
-**Don't forget to change the SMBIOS to avoid conflict with another devices (use MacPro 7,1 or latest iMac SMBIOS).**
+OpenCore EFI configuration to boot MacOS Tahoe on Intel Haswell system.  
+Currently using OpenCore 1.0.5 (will be updated when new version released).
 
-# This configuration was tested on:
-**CPU :**    Intel Core i7 4790  
-**MOBO :**    Asrock H97M Pro4  
-**GPU :**    MSI RX 5700 XT MECH OC  
-**RAM :**    16GB DDR3  
-**SSD :**    512GB Sk Hynix NVME  
+# My current specifications:
+| **Components** | **Name** | **Notes** |
+| -------------- | -------- | --------- |
+| **CPU** | Intel Core i7 4790 | 
+| **Motherboard** | Asrock H97M Pro4 |
+| **GPU** | MSI Radeon RX 5700XT MECH OC | `Kernel panic when using whatevergreen.kext` |
+| **RAM** | Kingston 2x8GB DDR3 |
+| **Storage** | SK Hynix NVME 512GB |
+| **Ethernet** | Intel Gigabit I218-V |
+| **Audio** | Realtek ALC892 | `Currently not supported on MacOS 26` |
+| **OS** | MacOS 26 | `MacOS 26.1 (25B78)` |
 
-**Some config and kext might need a litte bit modifications depending on your specifications.* 
+> [!IMPORTANT]
+> Some config and kext might need a litte bit modifications depending on your specifications.
 
 # What's working and not working  
 
 - Onboard LAN.
-- Full GPU acceleration support (Liquid Glass works perfectly fine).
+- GPU Metal 3 support.
 - Onboard audio not working (AppleHDA was removed from Tahoe, use external audio like DAC or HDMI/DP audio).
-- WhateverGreen was removed due to causing kernel panic during boot.
+- WhateverGreen was removed due to causing kernel panic.
 - iService not fully tested (I can login and use my apple account without issue).
 - iGPU not tested since I use external GPU (it should work if you configure the PciRoot section properly).
 - Changed the GUI on boot section to make it looks like on every mac.
 
-**Depending on your config or specs later might change the functionality.*
+> [!NOTE]
+> Depending on your config or specs later might change the functionality.
+
+# Screenshot
+![MacOS 26 screenshot](https://idexine.s-ul.eu/175KQZct.jpg)
